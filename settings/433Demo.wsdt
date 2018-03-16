@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>433Demo/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>200</Column0><Column1>24</Column1><Column2>24</Column2><Column3>0</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1029</ColumnWidth1><ColumnWidth2>274</ColumnWidth2><ColumnWidth3>68</ColumnWidth3></Build>
+    <TerminalIO/><Disassembly><ShowCodeCoverage>1</ShowCodeCoverage><ShowInstrProfiling>1</ShowInstrProfiling><col-names><item>Disassembly</item><item>_I0</item></col-names><col-widths><item>500</item><item>20</item></col-widths><DisasmHistory/></Disassembly><Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1197</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-25307-22964</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>433Demo</ExpandedNode><ExpandedNode>433Demo/STM8S_stdLib</ExpandedNode><ExpandedNode>433Demo/lib</ExpandedNode><ExpandedNode>433Demo/src</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-25600-23163</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-25896-11328</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\inc\stm8s.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>58</YPos2><SelStart2>3741</SelStart2><SelEnd2>3741</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\Xlight_lib\delay.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\inc\stm8s_uart2.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\src\stm8s_clk.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>249</YPos2><SelStart2>8157</SelStart2><SelEnd2>8157</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Project\lib\drv_CC1101_Reg.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>60</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Project\lib\drv_spi.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>7</YPos2><SelStart2>782</SelStart2><SelEnd2>782</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\src\stm8s_gpio.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>147</YPos2><SelStart2>5661</SelStart2><SelEnd2>5661</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Project\src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>27</YPos2><SelStart2>917</SelStart2><SelEnd2>917</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Project\lib\drv_spi.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>30</YPos2><SelStart2>1398</SelStart2><SelEnd2>1398</SelEnd2></Tab><ActiveTab>8</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Project\lib\drv_CC1101.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>192</YPos2><SelStart2>4758</SelStart2><SelEnd2>4758</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\src\stm8s_spi.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>157</YPos2><SelStart2>6295</SelStart2><SelEnd2>6295</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\Xlight_lib\delay.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>164</SelStart2><SelEnd2>164</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\Xlight_lib\Uart2Dev.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>262</SelStart2><SelEnd2>262</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\Xlight_lib\Uart2Dev.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>9</YPos2><SelStart2>953</SelStart2><SelEnd2>953</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\src\stm8s_uart2.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>631</YPos2><SelStart2>20680</SelStart2><SelEnd2>20680</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Project\lib\drv_CC1101.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>27</YPos2><SelStart2>1012</SelStart2><SelEnd2>1012</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\xlightCommon-stm8s\STM8S_StdPeriph_Driver\inc\stm8s_spi.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>278</YPos2><SelStart2>12543</SelStart2><SelEnd2>12543</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-07245F58><key>iaridepm.enu1</key></Toolbar-07245F58></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>808</Bottom><Right>268</Right><x>-2</x><y>-2</y><xscreen>259</xscreen><yscreen>202</yscreen><sizeHorzCX>206375</sizeHorzCX><sizeHorzCY>204453</sizeHorzCY><sizeVertCX>215139</sizeVertCX><sizeVertCY>819838</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>135</Bottom><Right>1257</Right><x>-2</x><y>-2</y><xscreen>1259</xscreen><yscreen>137</yscreen><sizeHorzCX>1003187</sizeHorzCX><sizeHorzCY>138664</sizeHorzCY><sizeVertCX>206375</sizeVertCX><sizeVertCY>204453</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
