@@ -32,6 +32,48 @@ uint8_t g_TxMode = 0;
 uint8_t g_UartRxBuffer[ 100 ] = { 0 };
 uint8_t g_RF24L01RxBuffer[ 32 ] = { 0 }; 
 
+void uart_puthex_nibble(const unsigned char b)
+{
+    unsigned char  c = b & 0x0f;
+    if (c>9) c += 'A'-10;
+    else c += '0';
+    printlog(&c);
+}
+
+void uart_puthex_byte(const unsigned char b)
+{
+    uart_puthex_nibble(b>>4);
+    uart_puthex_nibble(b);
+} 
+
+
+void show_register_settings()
+{
+  uint8_t config_reg_verify[47],Patable_verify[8];
+  
+  CC1101_Read_Multi_Reg(CC1101_IOCFG2,config_reg_verify,47);
+  CC1101_Read_Multi_Reg( CC1101_PATABLE, (uint8_t*)Patable_verify, 8 );
+
+  printlog("Cfg_reg:\r\n");
+
+  for(uint8_t i = 0 ; i < 47; i++)  //showes rx_buffer for debug
+      {
+          uart_puthex_byte(config_reg_verify[i]);printlog(" ");
+          if(i==9 || i==19 || i==29 || i==39) //just for beautiful output style
+              {
+                  printlog("\r\n");
+              }
+      }
+      printlog("\r\n");
+      printlog("PaTable:\r\n");
+
+      for(uint8_t i = 0 ; i < 8; i++)         //showes rx_buffer for debug
+          {
+              uart_puthex_byte(Patable_verify[i]);printlog(" ");
+          }
+  printlog("\r\n");
+}
+
 //#define SENDER
 
 /**
@@ -50,12 +92,13 @@ int main( void )
  
 	//串口初始化
 	uart2_config( 9600 );
-        printlog("start...");
+        printlog("start...\r\n");
 	delay_ms(500);
 	//SPI初始化
 	drv_spi_init( );
 	//CC1101初始化
 	CC1101_Init( );
+        show_register_settings();
 #ifdef SENDER
  //发送
 	while( 1 )	
