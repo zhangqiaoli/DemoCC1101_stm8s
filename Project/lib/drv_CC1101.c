@@ -20,9 +20,10 @@
 
 //10, 7, 5, 0, -5, -10, -15, -20, dbm output power, 0x12 == -30dbm
 const uint8_t PaTabel[ ] = { 0xc0, 0xC8, 0x84, 0x60, 0x68, 0x34, 0x1D, 0x0E};
-static const uint8_t CC1101InitData[ 22 ][ 2 ]= 
+static const uint8_t CC1101InitData[ 23 ][ 2 ]= 
 {
   { CC1101_IOCFG0,      0x06 },
+  { CC1101_IOCFG2,      0x06 },
   { CC1101_FIFOTHR,     0x47 },
   { CC1101_PKTCTRL0,    0x05 },
   { CC1101_CHANNR,      0x96 },	//430M
@@ -299,7 +300,7 @@ void CC1101_Clear_RxBuffer( void )
   * @note  :无
   * @retval:无
   */ 
-void CC1101_Tx_Packet( uint8_t *pTxBuff, uint8_t TxSize, CC1101_TxDataModeType DataMode )
+void CC1101_Tx_Packet( uint8_t *pTxBuff, uint8_t TxSize,uint8_t to, CC1101_TxDataModeType DataMode )
 {
     uint8_t Address;
 	uint16_t l_RxWaitTimeout = 0;
@@ -317,8 +318,9 @@ void CC1101_Tx_Packet( uint8_t *pTxBuff, uint8_t TxSize, CC1101_TxDataModeType D
     
     if(( CC1101_Read_Reg( CC1101_PKTCTRL1 ) & 0x03 ) != 0 )	
     {
-        CC1101_Write_Reg( CC1101_TXFIFO, TxSize + 1 );		
-        CC1101_Write_Reg( CC1101_TXFIFO, Address );			//写入长度和地址 由于多一个字节地址此时长度应该加1
+        CC1101_Write_Reg( CC1101_TXFIFO, TxSize + 2 );		
+        CC1101_Write_Reg( CC1101_TXFIFO, to );			//写入长度和地址 由于多一个字节地址此时长度应该加1
+        CC1101_Write_Reg( CC1101_TXFIFO, Address );
     }
     else
     {
@@ -456,11 +458,11 @@ void CC1101_Init( void )
 	CC1101_Gpio_Init( );
 	CC1101_Reset( );    
 
-	for( i = 0; i < 22; i++ )
+	for( i = 0; i < 23; i++ )
 	{
 		CC1101_Write_Reg( CC1101InitData[i][0], CC1101InitData[i][1] );
 	}
-	CC1101_Set_Address( 0x05, BROAD_0AND255 );	//设备地址 和 地址检测模式设置
+	CC1101_Set_Address( 0x05, BROAD_0 );	//设备地址 和 地址检测模式设置
 	CC1101_Set_Sync( 0x8799 );					//同步字段设置
 	CC1101_Write_Reg(CC1101_MDMCFG1, 0x72);		//调制解调器配置
 

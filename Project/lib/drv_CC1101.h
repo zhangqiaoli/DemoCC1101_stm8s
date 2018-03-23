@@ -80,7 +80,7 @@ void CC1101_Set_Address( uint8_t address, CC1101_AddrModeType AddressMode);
 void CC1101_Set_Sync( uint16_t Sync );
 void CC1101_Clear_TxBuffer( void );
 void CC1101_Clear_RxBuffer( void );
-void CC1101_Tx_Packet( uint8_t *pTxBuff, uint8_t TxSize, CC1101_TxDataModeType DataMode );
+void CC1101_Tx_Packet( uint8_t *pTxBuff, uint8_t TxSize,uint8_t to, CC1101_TxDataModeType DataMode );
 uint8_t CC1101_Get_RxCounter( void );
 uint8_t CC1101_Rx_Packet( uint8_t *RxBuff );
 void CC1101_Reset( void );

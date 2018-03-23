@@ -27,7 +27,7 @@ enum
 };
 
 
-const char *g_Ashining = "ashining";
+const char *g_Ashining = "Ack";
 uint8_t g_TxMode = 0;
 uint8_t g_UartRxBuffer[ 100 ] = { 0 };
 uint8_t g_RF24L01RxBuffer[ 32 ] = { 0 }; 
@@ -84,6 +84,7 @@ void show_register_settings()
   */ 
 
 uint8_t i = 0;
+uint8_t brecv = 0;
 int main( void )
 {	
     /* High speed internal clock prescaler: 1 */
@@ -113,10 +114,15 @@ int main( void )
 	}
 #else
 //接收
+        CC1101_Set_Mode( RX_MODE );
 
 	while( 1 )
 	{
-
+               /*if(brecv)
+               {
+                 Uart2SendByteByLen( g_RF24L01RxBuffer, i );	//输出接收到的字节
+                 brecv = 0;
+               }*/
                 CC1101_Clear_RxBuffer( );
                 CC1101_Set_Mode( RX_MODE );
 		i = CC1101_Rx_Packet( g_RF24L01RxBuffer );		//接收字节
@@ -124,7 +130,9 @@ int main( void )
 		{
                         //delay_ms( 200 );
 			Uart2SendByteByLen( g_RF24L01RxBuffer, i );	//输出接收到的字节
+                        CC1101_Tx_Packet( (uint8_t *)g_Ashining, 3 , 1,ADDRESS_CHECK );
 		}
+                
 	}
 #endif
 	
