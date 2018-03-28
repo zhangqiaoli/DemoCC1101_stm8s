@@ -473,3 +473,15 @@ void CC1101_Init( void )
 
 	CC1101_Write_Multi_Reg( CC1101_PATABLE, (uint8_t*)PaTabel, 8 );
 }
+
+void CC1101_EnableIRQ(void) {
+  disableInterrupts();
+  GPIO_Init(
+    GPIOC,
+    GPIO_PIN_2,
+    GPIO_MODE_IN_FL_IT
+  );
+  EXTI_SetExtIntSensitivity(EXTI_PORT_GPIOC, EXTI_SENSITIVITY_FALL_ONLY);
+  enableInterrupts();
+}
+

@@ -86,6 +86,7 @@ uint8_t CC1101_Get_RxCounter( void );
 uint8_t CC1101_Rx_Packet( uint8_t *RxBuff );
 void CC1101_Reset( void );
 void CC1101_Init( void );
+void CC1101_EnableIRQ(void); 
 
 
 #endif

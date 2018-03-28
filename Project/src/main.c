@@ -100,6 +100,7 @@ int main( void )
 	//CC1101初始化
 	CC1101_Init( );
         show_register_settings();
+        CC1101_EnableIRQ();
 #ifdef SENDER
  //发送
 	while( 1 )	
@@ -118,24 +119,40 @@ int main( void )
 
 	while( 1 )
 	{
-               /*if(brecv)
+               if(brecv)
                {
-                 Uart2SendByteByLen( g_RF24L01RxBuffer, i );	//输出接收到的字节
+                 Uart2SendByteByLen( g_RF24L01RxBuffer+1, i );	//输出接收到的字节
+                 CC1101_Tx_Packet( (uint8_t *)g_Ashining, 3 , 1,ADDRESS_CHECK );
                  brecv = 0;
-               }*/
-                CC1101_Clear_RxBuffer( );
-                CC1101_Set_Mode( RX_MODE );
-		i = CC1101_Rx_Packet( g_RF24L01RxBuffer );		//接收字节
+                 //CC1101_Clear_RxBuffer( );
+                 CC1101_Set_Mode( RX_MODE );
+               }
+
+		/* i = CC1101_Rx_Packet( g_RF24L01RxBuffer );		//接收字节
 		if( 0 != i )
 		{
                         //delay_ms( 200 );
 			Uart2SendByteByLen( g_RF24L01RxBuffer+1, i );	//输出接收到的字节
                         CC1101_Tx_Packet( (uint8_t *)g_Ashining, 3 , 1,ADDRESS_CHECK );
-		}
+		}*/
                 
 	}
 #endif
 	
+}
+
+INTERRUPT_HANDLER(EXTI_PORTC_IRQHandler, 5) {
+  //disableInterrupts();
+  /*GPIO_Init(GPIOC,GPIO_Pin_2,GPIO_Mode_In_PU_No_IT);
+  EXTI_ClearITPendingBit(EXTI_IT_Pin2);
+  GPIO_Init(GPIOC,GPIO_Pin_2,GPIO_Mode_In_PU_No_IT);*/
+  
+           i = CC1101_Rx_Packet( g_RF24L01RxBuffer );		//接收字节
+		if( 0 != i )
+		{
+                  brecv = 1;
+                }
+  //enableInterrupts();
 }
 
 
