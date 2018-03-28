@@ -255,6 +255,11 @@ void CC1101_Set_Address( uint8_t Address, CC1101_AddrModeType AddressMode)
 	CC1101_Write_Reg( CC1101_PKTCTRL1, btmp);			//写入地址模式	
 }
 
+void CC1101_Set_Channel( uint8_t channel)
+{
+  CC1101_Write_Reg( CC1101_CHANNR, channel );
+}
+
 /**
   * @brief :CC1101设置同步字段
   * @param :无

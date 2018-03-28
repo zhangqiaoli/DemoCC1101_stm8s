@@ -77,6 +77,7 @@ void CC1101_Set_Mode( CC1101_ModeType Mode );
 void CC1101_Set_Idle_Mode( void );
 void C1101_WOR_Init( void );
 void CC1101_Set_Address( uint8_t address, CC1101_AddrModeType AddressMode);
+void CC1101_Set_Channel( uint8_t channel);
 void CC1101_Set_Sync( uint16_t Sync );
 void CC1101_Clear_TxBuffer( void );
 void CC1101_Clear_RxBuffer( void );

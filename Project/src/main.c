@@ -129,7 +129,7 @@ int main( void )
 		if( 0 != i )
 		{
                         //delay_ms( 200 );
-			Uart2SendByteByLen( g_RF24L01RxBuffer, i );	//输出接收到的字节
+			Uart2SendByteByLen( g_RF24L01RxBuffer+1, i );	//输出接收到的字节
                         CC1101_Tx_Packet( (uint8_t *)g_Ashining, 3 , 1,ADDRESS_CHECK );
 		}
                 
